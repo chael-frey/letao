@@ -1,0 +1,45 @@
+@import "./base.less";
+#header{
+    .center{
+        input{
+            margin: 0;
+            background-color: #fff;
+            font-size: .14rem;
+        }
+    }
+}
+#main{
+    display: flex;
+    >div{
+        height: 100%;
+    }
+    .left{
+        width: 0.8rem;
+        .mui-table-view{
+            .mui-table-view-cell{
+                &::after{
+                    left: 0;
+                }
+            }
+        }
+    }
+    .right{
+        flex: 1;
+        padding: .1rem;
+        .mui-scrollbar-vertical{
+            right: -.5rem;
+        }
+        .mui-col-xs-4{
+            margin-bottom: .1rem;
+            background-color: #fff;
+            img{
+                width: 100%;
+            }
+            p{
+                margin: 0;
+                text-align: center;
+                line-height: .2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+// 项目里面的页面很多重复样式 需要封装在公共文件里面
+// 1. 定义一些公共变量
+@main-color: #006699;
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// 2. 样式初始化 （不需要写那么多有MUI已经写了一些稍微加一点点）
+html {
+    font-size: 26.66667vw;
+}
+
+body{
+    height: 100vh;
+    .flex-center();
+    flex-direction: column;
+    font-size: .14rem;
+    line-height: .14rem;
+}
+
+// 去掉标题默认间距
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+// 去除图片和块级元素3px间隙
+img {
+    vertical-align: middle;
+}
+.mui-scroll-wrapper{
+    position: relative;
+    height: 100%;
+}
+// 3. 一些公共样式 头部底部公共样式  改完了less之后发现样式没出来在去index.less保存一下
+#header{
+    width: 100%;
+    background-color: @main-color;
+    height: 0.45rem;
+    .flex-center();
+    .left,.right{
+        width: .45rem;
+        height:.45rem;
+        .flex-center();
+        .fa{
+            font-size: .18rem;
+            color: #fff;
+        }
+    }
+    .center{
+        flex: 1;
+        h4{
+            height: 100%;
+            color: #fff;
+            .flex-center();
+        }
+    }
+}
+#main{
+    position: relative;
+    flex: 1;
+    width: 100%;
+}
+#footer{
+    background-color: @main-color;
+    width: 100%;
+    height: 0.45rem;
+        a{  
+            height: .45rem;
+            .flex-center();
+            flex-direction: column;
+            color: #fff;
+            &.active{
+                color: orange;
+            }
+        }
+}

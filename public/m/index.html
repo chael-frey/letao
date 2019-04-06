@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘主页</title>
+    <!-- 1.引入MUI框架 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 2.引入font-awesome字体图标库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入首页css文件 -->
+    <link rel="stylesheet" href="./less/index.css">
+</head>
+<body>
+    <header id="header">
+        <div class="left"></div>
+        <div class="center">
+            <h4>乐淘主页</h4>
+        </div>
+        <div class="right">
+            <i class="fa fa-search"></i>
+        </div>
+    </header>
+    <main id="main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 1.轮播图 -->
+                        <div id="slider" class="mui-slider">
+                                <div class="mui-slider-group mui-slider-loop">
+                                    <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+                                    <div class="mui-slider-item mui-slider-item-duplicate">
+                                        <a href="#">
+                                            <img src="./images/banner4.png">
+                                        </a>
+                                    </div>
+                                    <!-- 第一张 -->
+                                    <div class="mui-slider-item">
+                                        <a href="#">
+                                                <img src="./images/banner1.png">                        
+                                            </a>
+                                    </div>
+                                    <!-- 第二张 -->
+                                    <div class="mui-slider-item">
+                                        <a href="#">
+                                                <img src="./images/banner2.png">                        
+                                            </a>
+                                    </div>
+                                    <!-- 第三张 -->
+                                    <div class="mui-slider-item">
+                                        <a href="#">
+                                                <img src="./images/banner3.png">                        
+                                            </a>
+                                    </div>
+                                    <!-- 第四张 -->
+                                    <div class="mui-slider-item">
+                                        <a href="#">
+                                                <img src="./images/banner4.png">                        
+                                            </a>
+                                    </div>
+                                    <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                                    <div class="mui-slider-item mui-slider-item-duplicate">
+                                        <a href="#">
+                                                <img src="./images/banner1.png">                        
+                                            </a>
+                                    </div>
+                                </div>
+                                <div class="mui-slider-indicator">
+                                    <div class="mui-indicator mui-active"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                </div>
+                            </div>
+                            <!-- 2.导航丽娜 -->
+                            <nav id="nav">
+                                <div class="mui-row">
+                                    <div class="mui-col-xs-4"><a href="#"><img src="./images/nav1.png" alt=""></a></div>
+                                    <div class="mui-col-xs-4"><a href="#"><img src="./images/nav2.png" alt=""></a></div>
+                                    <div class="mui-col-xs-4"><a href="#"><img src="./images/nav3.png" alt=""></a></div>
+                                    <div class="mui-col-xs-4"><a href="#"><img src="./images/nav4.png" alt=""></a></div>
+                                    <div class="mui-col-xs-4"><a href="#"><img src="./images/nav5.png" alt=""></a></div>
+                                    <div class="mui-col-xs-4"><a href="#"><img src="./images/nav6.png" alt=""></a></div>
+                                </div>
+                            </nav>
+                            <!-- 3.广告栏 -->
+                            <section id="banner">
+                                <div class="mui-row">
+                                    <div class="mui-col-xs-8">
+                                        <div class="mui-row">
+                                            <div class="mui-col-xs-6"><img src="./images/active1.png" alt=""></div>
+                                            <div class="mui-col-xs-6"><img src="./images/active2.png" alt=""></div>
+                                            <div class="mui-col-xs-6"><img src="./images/active4.png" alt=""></div>
+                                            <div class="mui-col-xs-6"><img src="./images/active5.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="mui-col-xs-4">
+                                            <img src="./images/active3.png" alt="">
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- 4.品牌专区 -->
+                            <section id="brand">
+                                <div class="brand-tit">
+                                    <img src="./images/title0.png" alt="">
+                                </div>
+                                <div class="brand-cont">
+                                    <div class="mui-row">
+                                        <div class="mui-col-xs-3"><a href="#"><img src="./images/brand1.png" alt=""></a></div>
+                                        <div class="mui-col-xs-3"><a href="#"><img src="./images/brand2.png" alt=""></a></div>
+                                        <div class="mui-col-xs-3"><a href="#"><img src="./images/brand3.png" alt=""></a></div>
+                                        <div class="mui-col-xs-3"><a href="#"><img src="./images/brand4.png" alt=""></a></div>
+                                        <div class="mui-col-xs-3"><a href="#"><img src="./images/brand5.png" alt=""></a></div>
+                                        <div class="mui-col-xs-3"><a href="#"><img src="./images/brand6.png" alt=""></a></div>
+                                        <div class="mui-col-xs-3"><a href="#"><img src="./images/brand7.png" alt=""></a></div>
+                                        <div class="mui-col-xs-3"><a href="#"><img src="./images/brand8.png" alt=""></a></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="height" style="height:1000px;"></div>
+                </div>
+            </div>
+            
+    </main>
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html" class="active">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
