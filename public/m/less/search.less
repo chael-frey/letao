@@ -1,0 +1,42 @@
+@import "./base.less";
+#main{
+    background-color: #fff;
+    .flex-center();
+    flex-direction: column;
+    .search-box{
+        .flex-center();
+        width: 100%;
+        form{
+            width: 100%;
+            .flex-center();
+            padding: .1rem;
+            .input-search{
+                margin: 0;
+                flex: 1;
+                border: 1px solid @main-color;
+                background-color: #fff;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                padding-left: .1rem;
+                font-size: .14rem ;
+                text-align: left;
+            }
+            .btn-search{
+                height: 0.34rem;
+                width: 0.6rem;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-left: none;
+                border-color: @main-color;
+                background-color: @main-color;
+            }
+        }
+    }
+    .search-history{
+        width: 100%;
+        flex: 1;
+       .mui-card-header{
+           font-size: .14rem;
+       } 
+    }
+}

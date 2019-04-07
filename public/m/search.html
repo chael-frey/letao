@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘主页</title>
+    <!-- 1.引入MUI框架 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 2.引入font-awesome字体图标库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入首页css文件 -->
+    <link rel="stylesheet" href="./less/search.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <div class="left">
+            <a href="index.html" class="fa fa-arrow-left"></a>
+        </div>
+        <div class="center">
+            <h4>搜索中心</h4>
+        </div>
+        <div class="right">
+            
+        </div>
+    </header>
+    <!-- 主体 -->
+    <main id="main">
+        <div class="search-box">
+            <form >
+                <input type="search" placeholder="请输入要搜索的商品" class="input-search">
+                <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+            </form>
+        </div>
+        <div class="search-history">
+            <div class="mui-card">
+                <!-- 卡片的头部 自带左右对齐-->
+                <div class="mui-card-header">
+                    <span>搜索历史</span>
+                    <a href="#" class="fa fa-trash btn-clear">清空记录</a>
+                </div>
+                <!-- 卡片的内容 -->
+                <div class="mui-card-content">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">再下实显示不出更多记录了！</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" >
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="cart.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+<script type="text/html" id="search-history">
+    {{if rows.length==0}}
+    <li class="mui-table-view-cell">再下实显示不出更多记录了！</li>
+    {{else}}
+    {{each rows value index}}
+    <li class="mui-table-view-cell">
+        {{value}}
+        <!-- mui-badge mui提供 右边带数字角标的样式 添加一个x图标 -->
+        <span class="mui-badge fa fa-close" data-index="{{index}}"></span>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+</script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/search.js"></script>
+</body>
+</html>

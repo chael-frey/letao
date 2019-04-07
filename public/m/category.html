@@ -24,7 +24,7 @@
             </form>
         </div>
         <div class="right">
-            <i class="fa fa-search"></i>
+            <a href="search.html" class="fa fa-search"></a>
         </div>
     </header>
     <!-- 主体 -->
@@ -225,9 +225,23 @@
             </div>
         </div>
     </footer>
+<!-- 左侧模板 -->
 <script type="text/html" id="leftTempLate">
+    {{each rows value }}
+        {{if($index==0) }}
+    <li class="mui-table-view-cell active" data-id="{{value.id}}">{{value.categoryName}}</li>
+    {{ else }}
+    <li class="mui-table-view-cell " data-id="{{value.id}}">{{value.categoryName}}</li>
+    {{ /if }}
+    {{/each}}
+</script>
+<!-- 右侧模板 -->
+<script type="text/html" id="rightTempLate">
     {{each rows value}}
-    <li class="mui-table-view-cell" data-id="{{value.id}}">{{value.categoryName}}</li>
+        <div class="mui-col-xs-4">
+            <img src="{{value.brandLogo}}" alt="">
+            <p>{{value.brandName}}</p>
+        </div>
     {{/each}}
 </script>
 <script src="./lib/mui/js/mui.js"></script>
