@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘主页</title>
+    <!-- 1.引入MUI框架 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 2.引入font-awesome字体图标库 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.引入首页css文件 -->
+    <link rel="stylesheet" href="./less/detail.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <div class="left">
+            <a href="index.html" class="fa fa-arrow-left"></a>
+        </div>
+        <div class="center">
+            <h4>商品详情</h4>
+        </div>
+        <div class="right">
+            <a href="index.html" class="fa fa-home"></a>
+        </div>
+    </header>
+    <!-- 主体 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+               
+            </div>
+        </div>
+    </main>
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-2">
+                <a href="index.html">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+            </div>
+            <div class="mui-col-xs-5">
+                <button type="button" class="mui-btn mui-btn-danger btn-add-cart">加入购物车</button>
+            </div>
+            <div class="mui-col-xs-5">
+                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+            </div>
+        </div>
+    </footer>
+<script type="text/html" id="detailTpl">
+    <section id="slider" class="mui-slider" >
+            <div class="mui-slider-group mui-slider-loop">
+                
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="{{pic[pic.length-1].picAddr}}">
+                    </a>
+                </div>
+                {{each pic value index}}
+                <div class="mui-slider-item">
+                    <a href="#">
+                        <img src="{{value.picAddr}}">
+                    </a>
+                </div>
+                {{/each}}
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="{{pic[0].picAddr}}">
+                    </a>
+                </div>
+                
+            </div>
+            <div class="mui-slider-indicator">
+                {{each pic value index}}
+                <div class="mui-indicator {{index==0?mui-active:''}}"></div>
+                {{/each}}
+            </div>
+        </section>
+        <ul class="mui-table-view ">
+                <li class="mui-table-view-cell detail-name">
+                    <p>名称：
+                        <strong>
+                            {{proName}}
+                        </strong>
+                    </p>
+                </li>
+                <li class="mui-table-view-cell detail-price">
+                    <p>价格：<span>￥{{price}}</span><del>￥{{oldPrice}}</del></p>
+                </li>
+                <li class="mui-table-view-cell detail-size">
+                    <div>
+                            <span>尺码：</span>
+                            {{each size}}
+                            <button type="button" data-size="{{$value}}" class="mui-btn mui-btn-outlined">{{$value}}</button>
+                            {{/each}}
+                    </div>
+                </li>
+                <li class="mui-table-view-cell detail-num">
+                       数量：
+                        <div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='{{num}}'>
+                                <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                                <input class="mui-numbox-input" type="number" value="1" />
+                                <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                        </div>
+                        剩余：<span>{{num}}</span>件
+                </li>
+        </ul>
+</script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/detail.js"></script>
+</body>
+</html>

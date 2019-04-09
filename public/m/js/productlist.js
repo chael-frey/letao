@@ -6,6 +6,12 @@ $(function(){
     nowSearchProduct();
     sortProduct();
     pullRefresh();
+    productInfo();
+    function productInfo(){
+        $(".mui-row").on("click",".product-buy",function(){
+            location="detail.html?id="+$(this).data("id");
+        })
+    }
     // 初始化滚动函数
     function pullRefresh(){
         mui.init({
